@@ -1,0 +1,17 @@
+# https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
+name: 'SX AUTO PUSH MESSAGE'
+description: 'A typescript template for rapid development of GitHub actions.'
+
+branding:
+  icon: 'file'
+  color: 'blue'
+
+inputs:
+  GITHUB_TOKEN:
+    description: Secret GitHub API token to use for making API requests.
+    default: ${{ github.token }}
+    required: true
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
